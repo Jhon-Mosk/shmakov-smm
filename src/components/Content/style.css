@@ -1,0 +1,16 @@
+.group-item-wrap {
+    margin-bottom: 30px;
+}
+
+.group-item__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.group-item__img {
+    max-width: 1440px;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+}
