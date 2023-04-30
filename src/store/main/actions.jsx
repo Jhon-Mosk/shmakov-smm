@@ -14,6 +14,7 @@ export const login = () => async (dispatch) => {
     await VK.Auth.login((response) => {
         if (response.session) {
             let userId = response.session.user.id;
+            console.log(response);
 
             dispatch({
                 type: LOGIN_SUCCESS,

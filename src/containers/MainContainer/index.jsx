@@ -8,6 +8,7 @@ import Filter from '../../components/Filter';
 
 import './style.css';
 import Modal from '../../components/Modal';
+import getAllVKGroups from '../../utils/getAllVKGroups';
 
 export function MainContainer() {
     const userId = useSelector(getUserId);
@@ -36,6 +37,7 @@ export function MainContainer() {
                 <div className='header'>
                     {(userId) ? null : <AuthButton />}
                     {(userId) ? <Filter groups={sortArrayDescending(groupsAll)} /> : null}
+                    {(userId) ? <button type='button' onClick={getAllVKGroups}>getAllVKGroups</button> : null}
                 </div>
                 {(userId) ? <Content groups={groupsFiltered} /> : <div>Пожалуйста авторизуйтесь</div>}
             </div>
